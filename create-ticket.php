@@ -19,18 +19,62 @@ $subject=$_POST['subject'];
 $tt=$_POST['tasktype'];
 $priority=$_POST['priority'];
 $ticket=$_POST['description'];
-$res=$_POST['res_pon'];
-$proye=$_POST['proyec_'];
+
+$archivos = $_FILES['archivos'];
+foreach ($archivos['tmp_name'] as $key => $tmp_name) {
+    $nombre_archivo = $archivos['name'][$key];
+    $tipo_archivo = $archivos['type'][$key];
+    $datos_archivo = file_get_contents($tmp_name);
+    //$sql = "INSERT INTO ticket (ticket_id, nombre_archivo, tipo_archivo, datos_archivo) VALUES (?, ?, ?, ?)";
+    //$stmt = $con->prepare($sql);
+    //$stmt->bind_param("isb", $tid, $nombre_archivo, $tipo_archivo, $datos_archivo);
+    //$stmt->execute();
+    //$stmt->close();
+}
+
+    // Tu código existente después de procesar los archivos...
+//$archivo= $_FILES['file']['tmp_name'];
+//$nombrearchivo =$_FILES['file']['name'];
+//move_uploaded_file($archivo, "files/" .$nombrearchivo);
+//$ruta="files/".$nombrearchivo;
+//$menu_taqueria->set("file",$nombrearchivo);
+//$resultado=$menu_taqueria->insertar();
+
+$res=$_SESSION['login'];
+$proye=$_POST['proyecto'];
+$des=$_POST['Destinatario'];
+//$fe=$_POST['Fecha_entrega'];
 //$ticfile=$_FILES["tfile'"]["name"];
 $st="Open";
-$fct=date('y-m-d');
+$fct=$_POST["Fecha_entrega"];
 $pdate=date('Y-m-d');
 //move_uploaded_file($_FILES["tfile"]["tmp_name"],"ticketfiles/".$_FILES["tfile"]["name"]);
-$a=mysqli_query($con,"insert into ticket(ticket_id,email_id,subject,res_pon,task_type,proyec_,prioprity,Fecha_entrega,ticket,status,posting_date)  values('$tid','$email','$subject','$res','$tt','$proye','$priority','$fct','$ticket','$st','$pdate')");
+$a=mysqli_query($con,"insert into ticket(
+    ticket_id,email_id,subject,res_pon,task_type,proyecto,prioprity,ticket,attachment,status,posting_date,Fecha_entrega,Destinatario)  
+    values(
+    '$tid','$email','$subject','$res','$tt','$proye','$priority','$ticket','','$st','$pdate','$fct','$des')");
 if($a)
 {
 echo "<script>alert('Ticket Genrated');</script>";
 }
+}
+if ($con){
+    $option_del_select="";
+    $Sql1="SELECT * FROM user ORDER BY name";
+    if ($resultado=mysqli_query($con, $Sql1)){
+        $count_user=mysqli_num_rows($resultado);
+        if($count_user>0){
+            while ($lsdatos=mysqli_fetch_array($resultado,MYSQLI_ASSOC)){
+                $email= $lsdatos["email"];
+                $name=$lsdatos["name"];
+                $option_del_select .=" <option value=\"$email\">$name</option>";
+            }
+        }else{
+            $option_del_select .=" <option value=\"0\">no hay usuarios</option>";
+        }
+    }else{
+            $option_del_select .=" <option value=\"0\">No se obtuvieron datos</option>";
+    }
 }
 ?>
 
@@ -38,7 +82,7 @@ echo "<script>alert('Ticket Genrated');</script>";
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<meta charset="utf-8" />
+<!--<meta charset="utf-8" />-->
 <title>CRM | Create  ticket</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
@@ -83,7 +127,14 @@ echo "<script>alert('Ticket Genrated');</script>";
     </div>
     <div class="clearfix"></div>
     <div class="content">  
-		<div class="page-title">	
+      <ul class="breadcrumb">
+        <li>
+          <a href="dashboard.php"><p>Home</p></a>
+        </li>
+        <li><a href="#" class="active">Create ticket</a></li>
+      </ul>
+    
+		<div class="page-title">
 			<h3>Create ticket</h3>
      
 	
@@ -94,7 +145,7 @@ echo "<script>alert('Ticket Genrated');</script>";
                             <div class="panel panel-default">
                              
                                 <div class="panel-body">                                                                        
-                                    <p align="center" style="color:#FF0000"><?=$_SESSION['msg1'];?><?=$_SESSION['msg1']="";?></p>
+                                    <p aling="center" style="color:#FF0000"><?=$_SESSION['msg1'];?><?=$_SESSION['msg1']="";?></p>
                                <div class="form-group">                                        
                                         <label class="col-md-3 col-xs-12 control-label">Subject</label>
                                         <div class="col-md-6 col-xs-12">
@@ -106,22 +157,10 @@ echo "<script>alert('Ticket Genrated');</script>";
                                         </div>
                                     </div>
                                     
-                                    <div class="form-group">                                        
-                                        <label class="col-md-3 col-xs-12 control-label">Responsable</label>
-                                        <div class="col-md-6 col-xs-12">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
-                                                <input type="text" name="res_pon" id="res_pon" value="" required class="form-control"/>
-                                            </div>            
-                                        
-                                        </div>
-                                    </div>
-                                                
-
                                     <div class="form-group">
                                         <label class="col-md-3 col-xs-12 control-label">Proyecto</label>
                                         <div class="col-md-6 col-xs-12">                                                                                            
-                                            <select  name="proyec_" class="form-control select" required>
+                                            <select  name="proyecto" class="form-control select" required>
                                                 <option> Selecciona el prouecto</option>
                                                 <option value="billing">SEO</option>
                                                 <option value="ot1">Malpaso </option>
@@ -132,6 +171,16 @@ echo "<script>alert('Ticket Genrated');</script>";
                                         </div>
                                     </div>
 									
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Asignar a:</label>
+                                        <div class="col-md-6 col-xs-12">                                                                                            
+                                            <select  name="Destinatario" class="form-control select" required>
+                                                <option> Selecciona un usuario</option>
+                                                <?php echo $option_del_select;?>
+                                            </select>
+                                           </div>
+                                        </div>
+                                    </div>
 									
 									 <div class="form-group">
                                         <label class="col-md-3 col-xs-12 control-label">Task Type</label>
@@ -162,7 +211,7 @@ echo "<script>alert('Ticket Genrated');</script>";
                                     <div class="form-group">
                                         <label class="col-md-3 col-xs-12 control-label">Fecha de entrega</label>
                                         <div class="col-md-6 col-xs-12">
-                                            <input type="date" name="Fecha_entrega" step="1" min="2013-01-01" max="2013-12-31" value="fct">
+                                            <input type="date" name="Fecha_entrega" value="fct">
                                         </div>
                                     </div>
 
@@ -172,7 +221,9 @@ echo "<script>alert('Ticket Genrated');</script>";
                                         <label class="col-md-3 col-xs-12 control-label">Description</label>
                                         <div class="col-md-6 col-xs-12">                                            
                                             <textarea name="description" required class="form-control" rows="5"></textarea>
-                                            
+                                        <div class="col-md-6 col-xs-12">
+                                            <input type="file" name="archivos" class="form-control" multiple />
+                                        </div>
                                         </div>
                                     </div>
 									

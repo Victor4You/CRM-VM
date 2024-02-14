@@ -55,7 +55,9 @@ include("dbconnection.php");
             <div class="tiles blue added-margin">
               <div class="tiles-body">
                 <div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
-                <?php $ret=mysqli_query($con,"select * from ticket where email_id='".$_SESSION['login']."'");
+                <?php $ret=mysqli_query($con,"SELECT * FROM ticket 
+                WHERE (email_id='".$_SESSION['login']."'OR Destinatario='".$_SESSION['login']."')
+                AND status='Open'");
 				$num=mysqli_num_rows($ret);
 				?>
                 <div class="heading"> <span class="animate-number" data-value="<?php echo $num;?>" data-animation-duration="1200">0</span>| <a href="view-tickets.php" style="color:#FFF"> View Tickets </a></div>
