@@ -92,7 +92,7 @@ if($num>0){
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <button onclick="descargarBackup()">Descargar</button>
+              <!--<button onclick="descargarBackup()">Descargar</button>
               <script>
                 function descargarBackup(){
                   var urlBackup='';
@@ -101,7 +101,7 @@ if($num>0){
                   link.download='';
                   link.click();
                   }
-              </script>
+              </script>-->
               <br>
 
               <?php if($row['admin_remark']!=''):?>
