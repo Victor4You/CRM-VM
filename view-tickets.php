@@ -6,11 +6,12 @@ include("dbconnection.php");
 include("checklogin.php");
 check_login();
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<meta charset="utf-8" />
+<!--<meta charset="utf-8" />-->
 <title>User | Ticket Support</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
@@ -49,18 +50,22 @@ check_login();
     <div class="content">
       <ul class="breadcrumb">
         <li>
-          <p>Home</p> 
+          <a href="dashboard.php"><p>Home</p></a>
         </li>
         <li><a href="#" class="active">View Ticket</a></li>
+        <li><a href="calendario.php">Ir al Calendario</a></li>
       </ul>
-      <div class="page-title"> <i class="icon-custom-left"></i>
+      <div class="page-title"><a href="dashboard.php"> <i class="icon-custom-left"></i></a>
         <h3>Ticket Support</h3>
       </div>
       <div class="clearfix"></div>
       
       <h4> <span class="semi-bold">Tickets</span></h4>
       <br>
-     <?php $rt=mysqli_query($con,"select * from ticket where email_id='".$_SESSION['login']."'");
+     <?php $rt=mysqli_query($con,"SELECT * 
+     FROM ticket 
+     WHERE (email_id='".$_SESSION['login']."'OR Destinatario='".$_SESSION['login']."')
+     AND status='Open'");
      $num=mysqli_num_rows($rt);
 if($num>0){
 
@@ -87,6 +92,16 @@ if($num>0){
                 </div>
                 <div class="clearfix"></div>
               </div>
+              <!--<button onclick="descargarBackup()">Descargar</button>
+              <script>
+                function descargarBackup(){
+                  var urlBackup='';
+                  var link =document.createElement('a');
+                  link.href=urlBackup;
+                  link.download='';
+                  link.click();
+                  }
+              </script>-->
               <br>
 
               <?php if($row['admin_remark']!=''):?>
@@ -112,7 +127,7 @@ if($num>0){
               </div>
             </div>
                <?php } } else {?>
-<h3 align="center" style="color:red;">No Record found</h3>
+<h3 aling="center" style="color:red;">No Record found</h3>
 <?php } ?>                
           </div>
         </div>
