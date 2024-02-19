@@ -48,18 +48,18 @@ check_login();
     <div class="content">
       <ul class="breadcrumb">
         <li>
-          <p>YOU ARE HERE</p>
+          <p>Area de </p>
         </li>
-        <li><a href="#" class="active">Quotes</a> </li>
+        <li><a href="#" class="active">Cotizaciones</a> </li>
       </ul>
       <div class="page-title"> <i class="icon-custom-left"></i>
-        <h3>Manage User Quotes</h3>
+        <h3>Administrar cotizaciones de usuarios</h3>
       </div>
       <div class="row-fluid">
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h4>Table <span class="semi-bold">Styles</span></h4>
+              <h4>Tipos de <span class="semi-bold">Tablas</span></h4>
               <div class="tools"> <a href="javascript:;" class="collapse"></a> <a href="#grid-config" data-toggle="modal" class="config"></a> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
             </div>
             <div class="grid-body ">
@@ -67,11 +67,11 @@ check_login();
                 <thead>
                   <tr>
                     <th style="width:1%">#</th>
-                    <th style="width:10%">Name</th>
-                    <th style="width:10%" data-hide="phone,tablet">Email</th>
-                    <th style="width:10%">Contact no</th>
-                    <th style="width:20%" data-hide="phone,tablet">Services Required</th>
-                    <th style="width:10%">Action </th>
+                    <th style="width:10%">Nombres</th>
+                    <th style="width:10%" data-hide="phone,tablet">Correos</th>
+                    <th style="width:10%">Numero de contacto</th>
+                    <th style="width:20%" data-hide="phone,tablet">Servicio requerido</th>
+                    <th style="width:10%">Actividad </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -103,7 +103,7 @@ check_login();
                         	<?php echo $row['nd'];?>
                             	<?php echo $row['others'];?>
                     </td>
-                      <td><a href="quote-details.php?id=<?php echo $row['id'];?>"><button class="btn-danger-dark">View</button></a></td>
+                      <td><a href="quote-details.php?id=<?php echo $row['id'];?>"><button class="btn-danger-dark">Vista</button></a></td>
                   </tr>
                  <?php $cnt=$cnt+1; } ?>
                 </tbody>

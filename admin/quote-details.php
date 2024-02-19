@@ -46,22 +46,22 @@ if(isset($_POST['remark']))
     <div id="portlet-config" class="modal hide">
       <div class="modal-header">
         <button data-dismiss="modal" class="close" type="button"></button>
-        <h3>Widget Settings</h3>
+        <h3>Configuración de herramientas</h3>
       </div>
-      <div class="modal-body"> Widget settings form goes here </div>
+      <div class="modal-body"> El formulario de configuración de herramientas va aquí </div>
     </div>
 
     <div class="clearfix"></div>
     <div class="content">                           
      <ul class="breadcrumb">
         <li>   
-			<p>Home<p>  					 							
+			<p>Hogar<p>  					 							
         </li>     				 
-        <li><a href="#" class="active">Quote Details </a></li>                    
+        <li><a href="#" class="active">Detalles de la cotización </a></li>                    
     </ul>
    	<div class="page-title">		
 		<i class="icon-custom-left"></i>
-		<h3>Quote Details</h3>	
+		<h3>Detalles de la cotización</h3>	
 	</div>
  	<?php
     $ret=mysqli_query($con,"select * from prequest where id='".$_GET['id']."'");
@@ -73,7 +73,7 @@ if(isset($_POST['remark']))
 					<div class="col-md-12">
 						    <div class="grid simple vertical green">
 							<div class="grid-title no-border">
-								<h4><?php echo $row['name'];?>'s Quote <span class="semi-bold">Details</span></h4>
+								<h4><?php echo $row['name'];?>Cita de <span class="semi-bold">Detalles</span></h4>
 								<div class="tools">
 									<a href="javascript:;" class="collapse"></a>
 									<a href="#grid-config" data-toggle="modal" class="config"></a>
@@ -84,17 +84,17 @@ if(isset($_POST['remark']))
 							<div class="grid-body no-border">
 								<div class="row-fluid ">
 									    <address class="margin-bottom-20 margin-top-10">
-											<strong>Name</strong>:
+											<strong>Nombre</strong>:
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['name'];?><br>
-                                            <strong>Email</strong>:
+                                            <strong>Correo</strong>:
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['email'];?><br>
-                                            <strong>Contact no.</strong>:
+                                            <strong>Numero de contacto</strong>:
 											&nbsp;<?php echo $row['contactno'];?><br>
-											<strong>Company</strong>:
+											<strong>Compañía</strong>:
 											&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['company'];?><br>
 										</address>	
                                         <address class="margin-bottom-20 margin-top-10">
-											<strong>Required Services</strong><br>
+											<strong>Servicios Requeridos</strong><br>
 											<?php echo $row['wdd'];?><br>
                     <?php echo $row['cms'];?>
                     <?php echo $row['seo'];?>
@@ -116,12 +116,12 @@ if(isset($_POST['remark']))
 											
 										</address>										 
 										<address>
-											<strong>Description</strong><br>
+											<strong>Descripción</strong><br>
 										<?php echo $row['query'];?>
 										</address>
                                         <form name="remark" action="" method="post" enctype="multipart/form-data">
                                         <address>
-											<strong>Remark</strong><br>
+											<strong>Comentario</strong><br>
 										<textarea name="adminremark" cols="70" rows="4"><?php echo $row['remark'];?></textarea><br /><br />
                                         <input type="submit" name="remark" value="Submit" />
 										</address>

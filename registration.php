@@ -29,7 +29,7 @@ echo "<script>window.location.href='login.php'</script>";
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
-<title>CRM | Registration</title>
+<title>CRM | Registrarse</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -60,8 +60,8 @@ return true;
 <div class="container">
   <div class="row login-container column-seperation">  
         <div class="col-md-5 col-md-offset-1">
-          <h2>Sign in to CRM</h2>
-          <p>            <a href="login.php">Sign in!</a> for a webarch account,It's free and always will be..</p>
+          <h2>Registrarse en CRM</h2>
+          <p>            <a href="login.php">Inicia sesión!</a> si ya tienes una cuenta.</p>
           <br>
 
 		  
@@ -70,7 +70,7 @@ return true;
 		 <form id="signup" name="signup" class="login-form" onsubmit="return checkpass();" method="post">
 		 <div class="row">
 		 <div class="form-group col-md-10">
-            <label class="form-label">Name</label>
+            <label class="form-label">Nombre</label>
             <div class="controls">
 				<div class="input-with-icon  right">                                       
 					<input type="text" name="name" id="name" class="form-control" required="true">                                
@@ -80,7 +80,7 @@ return true;
           </div>
            <div class="row">
 		 <div class="form-group col-md-10">
-            <label class="form-label">Email id</label>
+            <label class="form-label">Correo</label>
             <div class="controls">
 				<div class="input-with-icon  right">                                       
 					<input type="email" name="email" id="email" class="form-control" required="true">                                 
@@ -90,7 +90,7 @@ return true;
           </div>
            <div class="row">
 		 <div class="form-group col-md-10">
-            <label class="form-label">Password</label>
+            <label class="form-label">Contraseña</label>
             <div class="controls">
 				<div class="input-with-icon  right">                                       
 					<input type="password" name="password" id="password" class="form-control" required="true">                                 
@@ -100,7 +100,7 @@ return true;
           </div>
 		  <div class="row">
           <div class="form-group col-md-10">
-            <label class="form-label">Re-Password</label>
+            <label class="form-label">Confirmar contraseña</label>
             <span class="help"></span>
             <div class="controls">
 				<div class="input-with-icon  right">                                       
@@ -111,7 +111,7 @@ return true;
           </div>
           <div class="row">
           <div class="form-group col-md-10">
-            <label class="form-label">Contact no.</label>
+            <label class="form-label">Celular</label>
             <span class="help"></span>
             <div class="controls">
 				<div class="input-with-icon  right">                                       
@@ -123,12 +123,12 @@ return true;
           </div>
           <div class="row">
           <div class="form-group col-md-10">
-            <label class="form-label">Gender</label>
+            <label class="form-label">Genero</label>
             <span class="help"></span>
             <div class="controls">
 				<div class="input-with-icon  right">                                       
-					<input type="radio" value="m" name="gender" checked > Male
-          <input type="radio" value="f" name="gender" > Female
+					<input type="radio" value="m" name="gender" checked > Hombre
+          <input type="radio" value="f" name="gender" > Mujer
                                 
 				</div>
             </div>
@@ -136,7 +136,7 @@ return true;
           </div>
          <div class="row">
             <div class="col-md-10">
-              <input   class="btn btn-primary btn-cons pull-right" name="submit" value="Submit" type="submit" />
+              <input   class="btn btn-primary btn-cons pull-right" name="submit" value="Registrar" type="submit" />
             </div>
           </div>
 		  </form>

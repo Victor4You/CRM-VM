@@ -50,13 +50,13 @@ check_login();
     <div class="content">
       <ul class="breadcrumb">
         <li>
-          <a href="dashboard.php"><p>Home</p></a>
+          <a href="dashboard.php"><p>Tablero</p></a>
         </li>
-        <li><a href="#" class="active">View Ticket</a></li>
+        <li><a href="#" class="active">Ver Tickets</a></li>
         <li><a href="calendario.php">Ir al Calendario</a></li>
       </ul>
       <div class="page-title"><a href="dashboard.php"> <i class="icon-custom-left"></i></a>
-        <h3>Ticket Support</h3>
+        <h3>Centro de Tickets</h3>
       </div>
       <div class="clearfix"></div>
       
@@ -77,7 +77,7 @@ if($num>0){
           <div class="grid simple no-border">
             <div class="grid-title no-border descriptive clickable">
               <h4 class="semi-bold"><?php echo $row['subject'];?></h4>
-              <p ><span class="text-success bold">Ticket #<?php echo $row['ticket_id'];?></span> - Created on <?php echo $row['posting_date'];?> - Responsable: 
+              <p ><span class="text-success bold">Ticket #<?php echo $row['ticket_id'];?></span> - Creado el <?php echo $row['posting_date'];?> - Responsable: 
               <?php echo $row['res_pon'];?> <span class="label label-important"><?php echo $row['status'];?></span></p>
               <div class="actions"> <a class="view" href="javascript:;"><i class="fa fa-search"></i></a>  </div>
             </div>
@@ -116,7 +116,7 @@ if($num>0){
                       <br>
                       <?php echo $row['admin_remark'];?>
                       <hr>
-                      <p class="small-text">Posted on <?php echo $row['admin_remark_date'];?></p>
+                      <p class="small-text">Respondido el dia <?php echo $row['admin_remark_date'];?></p>
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -127,7 +127,7 @@ if($num>0){
               </div>
             </div>
                <?php } } else {?>
-<h3 aling="center" style="color:red;">No Record found</h3>
+<h3 aling="center" style="color:red;">No se encontraron Tickets</h3>
 <?php } ?>                
           </div>
         </div>

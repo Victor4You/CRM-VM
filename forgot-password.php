@@ -44,9 +44,9 @@ $_SESSION['msg']= "*Email not register with us.";
 <div class="container">
   <div class="row login-container column-seperation">  
         <div class="col-md-5 col-md-offset-1">
-          <h2>Forgot Password </h2>
+          <h2>Olvidaste la contraseña? </h2>
           <p>
-            <a href="registration.php">Sign up Now!</a> for a webarch account,It's free and always will be..</p>
+              Si aun no tienes cuenta <a href="registration.php">Registrate</a></p>
           <br>
 
 		   
@@ -56,7 +56,7 @@ $_SESSION['msg']= "*Email not register with us.";
 		 <form id="login-form" class="login-form" action="" method="post">
 		 <div class="row">
 		 <div class="form-group col-md-10">
-            <label class="form-label">Username / Email</label>
+            <label class="form-label">Correo</label>
             <div class="controls">
 				<div class="input-with-icon  right">                                       
 					<i class=""></i>
@@ -69,7 +69,7 @@ $_SESSION['msg']= "*Email not register with us.";
 		 
           <div class="row">
             <div class="col-md-10">
-              <button class="btn btn-primary btn-cons pull-right" name="submit" type="submit">submit</button>
+              <button class="btn btn-primary btn-cons pull-right" name="submit" type="submit">Confirmar</button>
             </div>
           </div>
 		  </form>

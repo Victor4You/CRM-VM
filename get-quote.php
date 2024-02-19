@@ -41,7 +41,7 @@ echo "<script>window.location.href='get-quote.php'</script>";
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
-<title>CRM | Request Quote</title>
+<title>CRM | Cotizar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -86,7 +86,7 @@ echo "<script>window.location.href='get-quote.php'</script>";
     <div class="clearfix"></div>
     <div class="content">  
 		<div class="page-title">	
-			<h3>Request a Quote</h3>
+			<h3>Realizar una cotización</h3>
      
 	
              <div class="row">
@@ -96,7 +96,7 @@ echo "<script>window.location.href='get-quote.php'</script>";
                             <div class="panel panel-default">
                              
                                 <div class="panel-body">
-                                    <p>Please click below mention services of your interest to receive quotation for the same:</p>
+                                    <p>Haz clic en los recuadros a continuación para mencionar los servicios de su interes para cotizar:</p>
                                 </div>
                                 <div class="panel-body">                                                                        
                                     
@@ -110,7 +110,7 @@ while($rw=mysqli_fetch_array($query)){
       ?>                                          
 
     <div class="form-group">
-     <label class="col-md-3 control-label">Name </label>
+     <label class="col-md-3 control-label">Nombre </label>
     <div class="col-md-9">                                            
     <div class="input-group">
         <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
@@ -121,7 +121,7 @@ while($rw=mysqli_fetch_array($query)){
        </div>
                                             
         <div class="form-group">                                        
-   <label class="col-md-3 control-label">Contact no</label>
+   <label class="col-md-3 control-label">Celular</label>
   <div class="col-md-9 col-xs-12">
   <div class="input-group">
    <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
@@ -133,26 +133,26 @@ while($rw=mysqli_fetch_array($query)){
                                             
                                             
 <div class="form-group">
-<label class="col-md-3 control-label">Service Required :</label>
+<label class="col-md-3 control-label">Servicios requeridos :</label>
     <div class="col-md-9">                                                                                                                                        
                                              <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="wdnd" value="Website Design & Development" checked="checked"/> Website Design & Development</label><br>
+                                             <input type="checkbox" class="icheckbox" name="wdnd" value="Website Design & Development" checked="checked"/> Diseño y Desarrollo de Sitio Web</label><br>
                                              <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="seo" value="SEO (Search Engine Optimization)" />SEO (Search Engine Optimization)	</label><br>
+                                             <input type="checkbox" class="icheckbox" name="seo" value="SEO (Search Engine Optimization)" />SEO (Optimización para Motores de Busqueda)	</label><br>
                                              <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="swd" value="Static Website Design" /> Static Website Design</label><br>
+                                             <input type="checkbox" class="icheckbox" name="swd" value="Static Website Design" /> Diseño de Web Estatica</label><br>
                                              <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="fwd" value="Flash Website Development" /> Flash Website Development</label><br>
+                                             <input type="checkbox" class="icheckbox" name="fwd" value="Flash Website Development" /> Desarrollo de Web Flash</label><br>
                                              <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="whs" value="Web Hosting Services" /> Web Hosting Services</label><br>
+                                             <input type="checkbox" class="icheckbox" name="whs" value="Web Hosting Services" /> Servicio de Alojamiento Web</label><br>
                                              <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="ed"  value="Ecommerce Development"/> Ecommerce Development</label><br>
+                                             <input type="checkbox" class="icheckbox" name="ed"  value="Ecommerce Development"/> Desarrollo de Plataforma E-commerce</label><br>
                                                  <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="opi" value="Online Payment Integration" /> Online Payment Integration</label><br>
+                                             <input type="checkbox" class="icheckbox" name="opi" value="Online Payment Integration" /> Integración de Pagos En Línea</label><br>
                                                  <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="dba" value="Dash board Application" /> Dash board Application</label><br>
+                                             <input type="checkbox" class="icheckbox" name="dba" value="Dash board Application" /> Aplicacion de Panel</label><br>
                                                  <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="nd" value="NewsLetter Design" /> NewsLetter Design</label>
+                                             <input type="checkbox" class="icheckbox" name="nd" value="NewsLetter Design" /> Diseño de Boletín Digital</label>
                                                 
                                                   
                                                 </div>
@@ -164,7 +164,7 @@ while($rw=mysqli_fetch_array($query)){
                                         <div class="col-md-6">
                                             
                                             <div class="form-group">                                        
-                                                <label class="col-md-3 control-label">Email</label>
+                                                <label class="col-md-3 control-label">Correo</label>
                                                 <div class="col-md-9">
                                                     <div class="input-group">
                                                         <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
@@ -175,7 +175,7 @@ while($rw=mysqli_fetch_array($query)){
                                             </div>
                                             
                                                <div class="form-group">                                        
-                                                <label class="col-md-3 control-label">Company</label>
+                                                <label class="col-md-3 control-label">Compañía</label>
                                                 <div class="col-md-9">
                                                     <div class="input-group">
                                                         <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
@@ -190,23 +190,23 @@ while($rw=mysqli_fetch_array($query)){
                                                 <label class="col-md-3 control-label"></label>
                                                 <div class="col-md-9">                                                                                                                                        
                                                  <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="cms" value="CMS (Content Management System)" />CMS (Content Management System)</label><br>
+                                             <input type="checkbox" class="icheckbox" name="cms" value="CMS (Content Management System)" />CMS (Sistema de Gestión de Contenidos)</label><br>
                                              <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="smo" value="SMO (Social Media Optimization)	" />SMO (Social Media Optimization)		</label><br>
+                                             <input type="checkbox" class="icheckbox" name="smo" value="SMO (Social Media Optimization)	" />SMO (Optimización para Redes Sociales)		</label><br>
                                              <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="dwd" value="Dynamic Website Design" /> Dynamic Website Design</label><br>
+                                             <input type="checkbox" class="icheckbox" name="dwd" value="Dynamic Website Design" /> Diseño de Sitio Web Dinamico</label><br>
                                              <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="dr" value="Domain Registration" /> Domain Registration </label><br>
+                                             <input type="checkbox" class="icheckbox" name="dr" value="Domain Registration" /> Registro de Dominio </label><br>
                                              <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="wm" value="Website Maintenance" /> Website Maintenance</label><br>
+                                             <input type="checkbox" class="icheckbox" name="wm" value="Website Maintenance" /> Mantenimiento de Sitio Web</label><br>
                                              <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="wta" value="Walk Through Animation" /> Walk Through Animation</label><br>
+                                             <input type="checkbox" class="icheckbox" name="wta" value="Walk Through Animation" /> Animación de Recorrido</label><br>
                                                  <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="ld" value="Logo Design" /> Logo Design</label><br>
+                                             <input type="checkbox" class="icheckbox" name="ld" value="Logo Design" /> Diseño de Logotipo</label><br>
                                                  <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="osc" value="Open Source Customization" /> Open Source Customization</label><br>
+                                             <input type="checkbox" class="icheckbox" name="osc" value="Open Source Customization" /> Personalización de Código Abierto</label><br>
                                                  <label class="check">
-                                             <input type="checkbox" class="icheckbox" name="other" value="Others" /> Others </label>
+                                             <input type="checkbox" class="icheckbox" name="other" value="Others" /> Otros </label>
                                                    
                                                 </div>
                                             </div>
@@ -214,7 +214,7 @@ while($rw=mysqli_fetch_array($query)){
                                         </div>
                                         <div style="margin-top:20px;" class="col-md-6">
                                          <div class="form-group">
-                                                <label class="col-md-3 control-label">Query</label>
+                                                <label class="col-md-3 control-label">Petición</label>
                                                 <div class="col-md-9 col-xs-12">                                            
                                                     <textarea class="form-control" rows="5" name="query" required></textarea>
                                                 </div>
@@ -224,8 +224,8 @@ while($rw=mysqli_fetch_array($query)){
    <?php } ?>   
                                 </div>
                                 <div class="panel-footer">
-                                    <button class="btn btn-default">Clear Form</button>                                    
-                                    <input value="Submit" type="submit" name="submit" class="btn btn-primary pull-right">
+                                    <input type="reset" value="Limpiar" class="btn btn-default">                                    
+                                    <input value="Enviar" type="submit" name="submit" class="btn btn-primary pull-right">
                                 </div>
                             </div>
                             </form>

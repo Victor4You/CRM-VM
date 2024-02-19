@@ -47,15 +47,15 @@ check_login();
             <div class="content">
                 <ul class="breadcrumb">
                     <li>
-                        <p>YOU ARE HERE</p>
+                        <p>Tablero</p>
                     </li> 
-                    <li><a href="#" class="active">Manage Users</a>
+                    <li><a href="#" class="active">Administrador de usuarios</a>
 
                     </li>
                 </ul>
                 <div class="page-title">	<i class="icon-custom-left"></i>
 
-                    	<h3>Manage Users </h3>	
+                    	<h3>Administrador de usuarios</h3>	
                 </div>
              
                 <div class="row">
@@ -64,7 +64,7 @@ check_login();
                             <div class="col-md-12">
                                 <div class="grid simple ">
                                     <div class="grid-title no-border">
-                                        	<h4>All Users Details</h4>
+                                        	<h4>Todos los detalles de los usuarios</h4>
                                         <div class="tools">	<a href="javascript:;" class="collapse"></a>
 											<a href="#grid-config" data-toggle="modal" class="config"></a>
 											<a href="javascript:;" class="reload"></a>
@@ -77,11 +77,11 @@ check_login();
                                                 <thead>
                                                     <tr>
                                                         <th>#</th>
-                                                        <th>Full Name</th>
-                                                        <th>Email ID </th>
-                                                        <th>Contact No</th>
-                                                        <th>Registration Date</th>
-                                                        <th>Action</th>
+                                                        <th>Nombre Completo</th>
+                                                        <th>Correo Electronico </th>
+                                                        <th>Numero de contacto</th>
+                                                        <th>Fecha de registro</th>
+                                                        <th>Editar / Eliminar</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>

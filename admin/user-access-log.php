@@ -9,7 +9,7 @@ check_login();
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
-<title>Admin | User Access Log </title>
+<title>Administrador | Registro de acceso de usuarios </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -40,26 +40,26 @@ check_login();
     <div id="portlet-config" class="modal hide">
       <div class="modal-header">
         <button data-dismiss="modal" class="close" type="button"></button>
-        <h3>Widget Settings</h3>
+        <h3>Configuración de herramientas</h3>
       </div>
-      <div class="modal-body"> Widget settings form goes here </div>
+      <div class="modal-body"> El formulario de configuración del herramientas va aquí</div>
     </div>
     <div class="clearfix"></div>
     <div class="content">
       <ul class="breadcrumb">
         <li>
-          <p>YOU ARE HERE</p>
+          <p>Area de</p>
         </li>
-        <li><a href="#" class="active">Access Log</a> </li>
+        <li><a href="#" class="active">Registro de acceso</a> </li>
       </ul>
       <div class="page-title"> <i class="icon-custom-left"></i>
-        <h3>Manage Access Log</h3>
+        <h3>Administrar el registro de acceso</h3>
       </div>
       <div class="row-fluid">
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h4>Table <span class="semi-bold">Styles</span></h4>
+              <h4>Tabla <span class="semi-bold">Estilos</span></h4>
               <div class="tools"> <a href="javascript:;" class="collapse"></a> <a href="#grid-config" data-toggle="modal" class="config"></a> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
             </div>
             <div class="grid-body ">
@@ -67,13 +67,13 @@ check_login();
                 <thead>
                   <tr>
                     <th style="width:1%">#Uid</th>
-                    <th style="width:10%">User Name</th>
+                    <th style="width:10%">Nombre de usuario</th>
                       <th style="width:10%">Email </th>
-                             <th style="width:18%">Login date | Login Time </th>
+                             <th style="width:18%">Fecha de inicio de sesión | Tiempo de inicio de sesión </th>
                     <th style="width:10%" data-hide="phone,tablet">IP</th>
-                    <th style="width:15%">Mac id</th>
-                    <th style="width:12%" data-hide="phone,tablet">City </th>
-                    <th style="width:10%">Country </th>
+                    <th style="width:15%">Identificador de bits </th>
+                    <th style="width:12%" data-hide="phone,tablet">Ciudad </th>
+                    <th style="width:10%">País </th>
                   </tr>
                 </thead>
                 <tbody>

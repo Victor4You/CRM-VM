@@ -24,7 +24,7 @@ echo "<script>alert('Your profile updated successfully.');</script>";
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
-<title>CRM | User Profile</title>
+<title>CRM | Perfil de usuario</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -65,7 +65,7 @@ echo "<script>alert('Your profile updated successfully.');</script>";
     <div class="clearfix"></div>
     <div class="content">  
 		<div class="page-title">	
-			<h3><?php echo $_SESSION['name'];?>'s Profile</h3>
+			<h3>Perfil de <?php echo $_SESSION['name'];?></h3>
 <?php
 $query=mysqli_query($con,"select * from user where email='".$_SESSION['login']."'");
 	 while($row=mysqli_fetch_array($query))
@@ -78,16 +78,16 @@ $query=mysqli_query($con,"select * from user where email='".$_SESSION['login']."
                             <form class="form-horizontal" method="post" enctype="multipart/form-data">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title"><strong>Your Profile</h3>
+                                    <h3 class="panel-title"><strong>Tu perfil</h3>
                                    <div align="right">
-                                        Registration Date :<?php echo $row['posting_date'];?> 
+                                        Fecha de registro :<?php echo $row['posting_date'];?> 
                                     </div>
                                 </div>
                              
                                 <div class="panel-body">                                                                        
                                     
                                     <div class="form-group">
-                                        <label class="col-md-3 col-xs-12 control-label">Name</label>
+                                        <label class="col-md-3 col-xs-12 control-label">Nombre</label>
                                         <div class="col-md-6 col-xs-12">                                            
                                             <div class="input-group">
                                                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
@@ -97,7 +97,7 @@ $query=mysqli_query($con,"select * from user where email='".$_SESSION['login']."
                                         </div>
                                     </div>
                                    <div class="form-group">
-                                        <label class="col-md-3 col-xs-12 control-label">Primary Email </label>
+                                        <label class="col-md-3 col-xs-12 control-label">Correo principal </label>
                                         <div class="col-md-6 col-xs-12">                                            
                                             <div class="input-group">
                                                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
@@ -107,7 +107,7 @@ $query=mysqli_query($con,"select * from user where email='".$_SESSION['login']."
                                         </div>
                                     </div>
 									   <div class="form-group">
-                                        <label class="col-md-3 col-xs-12 control-label">alternate Email  </label>
+                                        <label class="col-md-3 col-xs-12 control-label">Correo alternativo  </label>
                                         <div class="col-md-6 col-xs-12">                                            
                                             <div class="input-group">
                                                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
@@ -117,7 +117,7 @@ $query=mysqli_query($con,"select * from user where email='".$_SESSION['login']."
                                         </div>
                                     </div>
 									   <div class="form-group">
-                                        <label class="col-md-3 col-xs-12 control-label">Contact no </label>
+                                        <label class="col-md-3 col-xs-12 control-label">Celular </label>
                                         <div class="col-md-6 col-xs-12">                                            
                                             <div class="input-group">
                                                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
@@ -130,7 +130,7 @@ $query=mysqli_query($con,"select * from user where email='".$_SESSION['login']."
 									
 									
 									   <div class="form-group">
-                                        <label class="col-md-3 col-xs-12 control-label">Gender </label>
+                                        <label class="col-md-3 col-xs-12 control-label">Genero </label>
                                         <div class="col-md-6 col-xs-12">                                            
                                             <div class="input-group">
                                                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
@@ -138,24 +138,24 @@ $query=mysqli_query($con,"select * from user where email='".$_SESSION['login']."
                                                   <option value="<?php echo $row['gender'];?>"><?php $a=$row['gender'];
 												  if($a=='m')
 												  {
-												  echo "Male";
+												  echo "Hombre";
 												  }
 												    if($a=='f')
 												  {
-												  echo "Female";
+												  echo "Mujer";
 												  }
 												 
 												  
 												    if($a=='others')
 												  {
-												  echo "Others";
+												  echo "Otro";
 												  }
 												 
 												  
 												  ?></option>
-            <option value="m">Male</option>
-            <option value="f">Female</option>
-            <option value="others">Other</option>
+            <option value="m">Hombre</option>
+            <option value="f">Mujer</option>
+            <option value="others">Otro</option>
             </select>
                                             </select>
                                             </div>                                            
@@ -167,7 +167,7 @@ $query=mysqli_query($con,"select * from user where email='".$_SESSION['login']."
                                 
                                     
                                     <div class="form-group">
-                                        <label class="col-md-3 col-xs-12 control-label">Address</label>
+                                        <label class="col-md-3 col-xs-12 control-label">Dirección</label>
                                         <div class="col-md-6 col-xs-12">                                            
                                             <textarea class="form-control" name="address" rows="5"><?php echo $row['address'];?></textarea>
                                           
@@ -183,8 +183,8 @@ $query=mysqli_query($con,"select * from user where email='".$_SESSION['login']."
                                 </div>
 								<?php } ?>
                                 <div class="panel-footer">
-                                    <button class="btn btn-default" type="reset">Clear Form</button>                                    
-                                    <input type="submit" value="Update" name="update" class="btn btn-primary pull-right">
+                                    <input type="reset" value="Limpiar campos" class="btn btn-default">                                    
+                                    <input type="submit" value="Actualizar" name="update" class="btn btn-primary pull-right">
                                 </div>
                             </div>
                             </form>

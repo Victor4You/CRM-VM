@@ -29,7 +29,7 @@ exit();
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
-<title>CRM | Admin Login</title>
+<title>CRM | Inicio de sesión de administrador</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -47,7 +47,7 @@ exit();
 <div class="container">
   <div class="row login-container column-seperation">  
         <div class="col-md-5 col-md-offset-1">
-          <h2>Sign in to CRM Admin</h2>
+          <h2>Inicie sesión como Administrador de CRM</h2>
          
           <br>
 
@@ -58,7 +58,7 @@ exit();
          <p style="color: #F00"><?php echo $_SESSION['action1'];?><?php echo $_SESSION['action1']="";?></p>
 		 <div class="row">
 		 <div class="form-group col-md-10">
-            <label class="form-label">Username</label>
+            <label class="form-label">Nombre de usuario</label>
             <div class="controls">
 				<div class="input-with-icon  right">                                       
 					<i class=""></i>
@@ -69,7 +69,7 @@ exit();
           </div>
 		  <div class="row">
           <div class="form-group col-md-10">
-            <label class="form-label">Password</label>
+            <label class="form-label">Contraseña</label>
             <span class="help"></span>
             <div class="controls">
 				<div class="input-with-icon  right">                                       
@@ -81,7 +81,7 @@ exit();
           </div>
           <div class="row">
             <div class="col-md-10">
-              <button class="btn btn-primary btn-cons pull-right" name="login" type="submit">Login</button>
+              <button class="btn btn-primary btn-cons pull-right" name="login" type="submit">Iniciar</button>
             </div>
           </div>
 		  </form>
