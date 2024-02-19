@@ -48,7 +48,7 @@ exit();
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
-<title>CRM | Login</title>
+<title>CRM | Iniciar sesión</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -66,9 +66,9 @@ exit();
 <div class="container">
   <div class="row login-container column-seperation">  
         <div class="col-md-5 col-md-offset-1">
-          <h2>Sign in to CRM</h2>
+          <h2>Iniciar sesión en CRM</h2>
           <p>
-            <a href="registration.php">Sign up Now!</a> for a webarch account,It's free and always will be..</p>
+            Si aun no tienes cuenta <a href="registration.php">Registrate</a></p>
           <br>
 
 		   
@@ -78,7 +78,7 @@ exit();
 		 <form id="login-form" class="login-form" action="" method="post">
 		 <div class="row">
 		 <div class="form-group col-md-10">
-            <label class="form-label">Email</label>
+            <label class="form-label">Correo</label>
             <div class="controls">
 				<div class="input-with-icon  right">                                       
 					<i class=""></i>
@@ -89,7 +89,7 @@ exit();
           </div>
 		  <div class="row">
           <div class="form-group col-md-10">
-            <label class="form-label">Password</label>
+            <label class="form-label">Contraseña</label>
             <span class="help"></span>
             <div class="controls">
 				<div class="input-with-icon  right">                                       
@@ -101,13 +101,13 @@ exit();
           </div>
 		  <div class="row">
           <div class="control-group  col-md-10">
-            <div class="checkbox checkbox check-success"> <a href="forgot-password.php">Forgot Password </a>&nbsp;&nbsp;
+            <div class="checkbox checkbox check-success"> <a href="forgot-password.php">Olvideste tu contraseña? </a>&nbsp;&nbsp;
          </div>
           </div>
           </div>
           <div class="row">
             <div class="col-md-10">
-              <button class="btn btn-primary btn-cons pull-right" name="login" type="submit">Login</button>
+              <button class="btn btn-primary btn-cons pull-right" name="login" type="submit">Iniciar sesión</button>
             </div>
           </div>
 		  </form>

@@ -24,7 +24,7 @@ $userid=$_GET['id'];
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
-<title>CRM | Edit Profile </title>
+<title>CRM | Editar perfil</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -57,9 +57,9 @@ $userid=$_GET['id'];
     <div id="portlet-config" class="modal hide">
       <div class="modal-header">
         <button data-dismiss="modal" class="close" type="button"></button>
-        <h3>Widget Settings</h3>
+        <h3>Configuración del Widget</h3>
       </div>
-      <div class="modal-body"> Widget settings form goes here </div>
+      <div class="modal-body"> El formulario de configuración del widget va aquí</div>
     </div>
     <div class="clearfix"></div>
     <div class="content">  
@@ -67,13 +67,13 @@ $userid=$_GET['id'];
          <?php $rt=mysqli_query($con,"select * from user where id='".$_GET['id']."'");
 			  while($rw=mysqli_fetch_array($rt))
 			  {?>	
-			<h3><?php echo $rw['name'];?>'s Profile</h3>	
+			<h3><?php echo $rw['name'];?>Perfil de</h3>	
              
                         <form name="muser" method="post" action="" enctype="multipart/form-data">
                         
                      <table width="100%" border="0">
   <tr>
-    <td height="42">Name</td>
+    <td height="42">Nombre</td>
     <td><input type="text" name="name" id="name" value="<?php echo $rw['name'];?>" class="form-control"></td>
   </tr>
   <tr>

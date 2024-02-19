@@ -19,40 +19,17 @@ $subject=$_POST['subject'];
 $tt=$_POST['tasktype'];
 $priority=$_POST['priority'];
 $ticket=$_POST['description'];
-
-$archivos = $_FILES['archivos'];
-foreach ($archivos['tmp_name'] as $key => $tmp_name) {
-    $nombre_archivo = $archivos['name'][$key];
-    $tipo_archivo = $archivos['type'][$key];
-    $datos_archivo = file_get_contents($tmp_name);
-    //$sql = "INSERT INTO ticket (ticket_id, nombre_archivo, tipo_archivo, datos_archivo) VALUES (?, ?, ?, ?)";
-    //$stmt = $con->prepare($sql);
-    //$stmt->bind_param("isb", $tid, $nombre_archivo, $tipo_archivo, $datos_archivo);
-    //$stmt->execute();
-    //$stmt->close();
-}
-
-    // Tu código existente después de procesar los archivos...
-//$archivo= $_FILES['file']['tmp_name'];
-//$nombrearchivo =$_FILES['file']['name'];
-//move_uploaded_file($archivo, "files/" .$nombrearchivo);
-//$ruta="files/".$nombrearchivo;
-//$menu_taqueria->set("file",$nombrearchivo);
-//$resultado=$menu_taqueria->insertar();
-
 $res=$_SESSION['login'];
 $proye=$_POST['proyecto'];
 $des=$_POST['Destinatario'];
-//$fe=$_POST['Fecha_entrega'];
-//$ticfile=$_FILES["tfile'"]["name"];
 $st="Open";
 $fct=$_POST["Fecha_entrega"];
-$pdate=date('Y-m-d');
-//move_uploaded_file($_FILES["tfile"]["tmp_name"],"ticketfiles/".$_FILES["tfile"]["name"]);
-$a=mysqli_query($con,"insert into ticket(
-    ticket_id,email_id,subject,res_pon,task_type,proyecto,prioprity,ticket,attachment,status,posting_date,Fecha_entrega,Destinatario)  
-    values(
-    '$tid','$email','$subject','$res','$tt','$proye','$priority','$ticket','','$st','$pdate','$fct','$des')");
+$pdate=date('Y-m-d H:i:s');
+$a=mysqli_query($con,
+"INSERT into ticket
+(ticket_id,email_id,subject,res_pon,task_type,proyecto,prioprity,ticket,status,posting_date,Fecha_entrega,Destinatario)
+values
+('$tid','$email','$subject','$res','$tt','$proye','$priority','$ticket','$st','$pdate','$fct','$des')");
 if($a)
 {
 echo "<script>alert('Ticket Genrated');</script>";
@@ -81,9 +58,9 @@ if ($con){
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<!--<meta charset="utf-8" />-->
-<title>CRM | Create  ticket</title>
+<meta http-equiv="content-type" content="text/html" />
+<meta charset="UTF-8" />
+<title>CRM | Crear ticket</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -129,13 +106,13 @@ if ($con){
     <div class="content">  
       <ul class="breadcrumb">
         <li>
-          <a href="dashboard.php"><p>Home</p></a>
+          <a href="dashboard.php"><p>Tablero</p></a>
         </li>
-        <li><a href="#" class="active">Create ticket</a></li>
+        <li><a href="#" class="active">Crear ticket</a></li>
       </ul>
     
 		<div class="page-title">
-			<h3>Create ticket</h3>
+			<h3>Crear ticket</h3>
      
 	
              <div class="row">
@@ -147,7 +124,7 @@ if ($con){
                                 <div class="panel-body">                                                                        
                                     <p aling="center" style="color:#FF0000"><?=$_SESSION['msg1'];?><?=$_SESSION['msg1']="";?></p>
                                <div class="form-group">                                        
-                                        <label class="col-md-3 col-xs-12 control-label">Subject</label>
+                                        <label class="col-md-3 col-xs-12 control-label">Titulo</label>
                                         <div class="col-md-6 col-xs-12">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
@@ -161,7 +138,7 @@ if ($con){
                                         <label class="col-md-3 col-xs-12 control-label">Proyecto</label>
                                         <div class="col-md-6 col-xs-12">                                                                                            
                                             <select  name="proyecto" class="form-control select" required>
-                                                <option> Selecciona el prouecto</option>
+                                                <option> Selecciona un proyecto</option>
                                                 <option value="billing">SEO</option>
                                                 <option value="ot1">Malpaso </option>
                                                 <option value="ot2">Isla 3</option>
@@ -183,10 +160,10 @@ if ($con){
                                     </div>
 									
 									 <div class="form-group">
-                                        <label class="col-md-3 col-xs-12 control-label">Task Type</label>
+                                        <label class="col-md-3 col-xs-12 control-label">Tipo de tarea</label>
                                         <div class="col-md-6 col-xs-12">                                                                                            
                                             <select  name="tasktype" class="form-control select" required>
-                                                <option> Select your Task Type</option>
+                                                <option> Selecciona un tipo de tarea</option>
                                                 <option value="billing">Billing</option>
                                                 <option value="ot1">Option 1</option>
                                                 <option value="ot2">Option 2</option>
@@ -196,14 +173,14 @@ if ($con){
                                     </div>
 									
 										 <div class="form-group">
-                                        <label class="col-md-3 col-xs-12 control-label">Priority</label>
+                                        <label class="col-md-3 col-xs-12 control-label">Prioridad</label>
                                         <div class="col-md-6 col-xs-12">                                                                                            
                                             <select name="priority" class="form-control select">
-                                                <option value="">Choose your Priority</option>
-                                                <option value="important">Important</option>
-                                                <option value="urgent(functional problem)">Urgent (Functional Problem)</option>
-                                                <option value="non-urgent">Non-Urgent</option>
-                                                <option value="question">Question</option>
+                                                <option value="">Selecciona el nivel de prioridad</option>
+                                                <option value="important">Importante</option>
+                                                <option value="urgent(functional problem)">Urgente (Problema)</option>
+                                                <option value="non-urgent">No urgente</option>
+                                                <option value="question">Pregunta</option>
                                             </select>
                                            </div>
                                     </div>
@@ -211,38 +188,32 @@ if ($con){
                                     <div class="form-group">
                                         <label class="col-md-3 col-xs-12 control-label">Fecha de entrega</label>
                                         <div class="col-md-6 col-xs-12">
-                                            <input type="date" name="Fecha_entrega" value="fct">
+                                            <input type="datetime-local" name="Fecha_entrega" value="fct">
                                         </div>
                                     </div>
 
 									
 									  
                                     <div class="form-group">
-                                        <label class="col-md-3 col-xs-12 control-label">Description</label>
+                                        <label class="col-md-3 col-xs-12 control-label">Descripción</label>
                                         <div class="col-md-6 col-xs-12">                                            
                                             <textarea name="description" required class="form-control" rows="5"></textarea>
-                                        <div class="col-md-6 col-xs-12">
-                                            <input type="file" name="archivos" class="form-control" multiple />
-                                        </div>
-                                        </div>
+                                        </div>  
+                                            
+                                    </div>
+                                    <div class="form-group">
+                                        
                                     </div>
 									
 								
                                     </div>
-                                    
-                                
-                                    
-                                
-                                    
-                               
-                                    
-                                    
+                                        
 
                                 </div>
 								
                                 <div class="panel-footer">
-                                    <button class="btn btn-default">Clear Form</button>                                    
-                                    <input type="submit" value="Send" name="send" class="btn btn-primary pull-right">
+                                    <input type="reset" value="Limpiar campos" class="btn btn-default">                                    
+                                    <input type="submit" value="Enviar" name="send" class="btn btn-primary pull-right">
                                 </div>
                             </div>
                             </form>

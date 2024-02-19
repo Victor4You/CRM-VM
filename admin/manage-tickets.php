@@ -54,16 +54,16 @@ echo '<script>alert("Ticket has been updated.")</script>';
     <div class="content">
       <ul class="breadcrumb">
         <li>
-          <p>Home</p> 
+          <p>Menu</p> 
         </li>
-        <li><a href="#" class="active">View Ticket</a></li>
+        <li><a href="#" class="active">Ver Etiquetas</a></li>
       </ul>
       <div class="page-title"> <i class="icon-custom-left"></i>
-        <h3>Ticket Support</h3>
+        <h3>Soporte de Etiquetas</h3>
       </div>
       <div class="clearfix"></div>
       
-      <h4> <span class="semi-bold">Tickets</span></h4>
+      <h4> <span class="semi-bold">Etiquetas</span></h4>
       <br>
      <?php $rt=mysqli_query($con,"select * from ticket order by id desc");
 													while($row=mysqli_fetch_array($rt))
@@ -74,7 +74,7 @@ echo '<script>alert("Ticket has been updated.")</script>';
           <div class="grid simple no-border">
             <div class="grid-title no-border descriptive clickable">
               <h4 class="semi-bold"><?php echo $row['subject'];?></h4>
-              <p ><span class="text-success bold">Ticket #<?php echo $_SESSION['sid']=$row['ticket_id'];?></span> - Created on <?php echo $row['posting_date'];?>
+              <p ><span class="text-success bold">Etiqueta #<?php echo $_SESSION['sid']=$row['ticket_id'];?></span> - Created on <?php echo $row['posting_date'];?>
              <span class="label label-important"><?php echo $row['status'];?></span></p>
               <div class="actions"> <a class="view" href="javascript:;"><i class="fa fa-search"></i></a>  </div>
             </div>
@@ -101,7 +101,7 @@ echo '<script>alert("Ticket has been updated.")</script>';
                      <textarea name="aremark" cols="50" rows="4" required="true"><?php echo $row['admin_remark'];?></textarea>
                       <hr>
                       <p class="small-text"> 
-                        <input name="update" type="submit"  class="txtbox1" id="Update" value="update" size="40" />
+                        <input name="update" type="submit"  class="txtbox1" id="Update" value="Actualizar" size="40" />
  <input name="frm_id" type="hidden" id="frm_id" value="<?php echo $row['id'];?>" /></p>
                       </form>
                     </div>

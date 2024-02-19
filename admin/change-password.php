@@ -29,7 +29,7 @@ $_SESSION['msg1']="Old Password not match !!";
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
-<title>CRM | Change Password</title>
+<title>CRM | Cambiar contraseña</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -112,7 +112,7 @@ return true;
     <div class="clearfix"></div>
     <div class="content">  
 		<div class="page-title">	
-			<h3>Change Password</h3>	
+			<h3>Cambiar contraseña</h3>	
             <div class="row">
                         <div class="col-md-12">
                             
@@ -123,7 +123,7 @@ return true;
                                 <div class="panel-body">                                                                        
                                     <p align="center" style="color:#FF0000"><?php echo $_SESSION['msg1'];?><?php echo $_SESSION['msg1']="";?></p>
                                <div class="form-group">                                        
-                                        <label class="col-md-3 col-xs-12 control-label">Current Password</label>
+                                        <label class="col-md-3 col-xs-12 control-label">Contraseña actual</label>
                                         <div class="col-md-6 col-xs-12">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><span class="fa fa-unlock-alt"></span></span>
@@ -135,7 +135,7 @@ return true;
 									
 									
 									  <div class="form-group">                                        
-                                        <label class="col-md-3 col-xs-12 control-label">New Password</label>
+                                        <label class="col-md-3 col-xs-12 control-label">Contrasena nueva</label>
                                         <div class="col-md-6 col-xs-12">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><span class="fa fa-unlock-alt"></span></span>
@@ -144,7 +144,7 @@ return true;
                                           </div>
                                     </div>
 									 <div class="form-group">                                        
-                                        <label class="col-md-3 col-xs-12 control-label">Confirm Password</label>
+                                        <label class="col-md-3 col-xs-12 control-label">Confirmar</label>
                                         <div class="col-md-6 col-xs-12">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><span class="fa fa-unlock-alt"></span></span>
@@ -154,8 +154,8 @@ return true;
                                     </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <button class="btn btn-default">Clear Form</button>                                    
-                                    <input type="submit" value="Change" name="change" class="btn btn-primary pull-right">
+                                    <button class="btn btn-default">Limpiar campos</button>                                    
+                                    <input type="submit" value="Realizar " name="change" class="btn btn-primary pull-right">
                                 </div>
                             </div>
                             </form>

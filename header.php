@@ -25,9 +25,9 @@
             <div class="iconset top-settings-dark "></div>
             </a>
             <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
-              <li><a href="profile.php"> My Account</a> </li>
+              <li><a href="profile.php"> Mi perfil</a> </li>
               <li class="divider"></li>
-              <li><a href="logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
+              <li><a href="logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Salir</a></li>
             </ul>
           </li>
 

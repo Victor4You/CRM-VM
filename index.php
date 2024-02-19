@@ -27,6 +27,10 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
+    <div class="container">
+          <div class="col-sm-1" style="text-align: center;" >
+            <img src="img/cropped-vm-circulo-512px-e1651512241563.png" style="width: 40px; height:40px;">
+        </div>
       <a class="navbar-brand" href="#">CRM</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,10 +38,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="registration.php">User Sign Up</a>
+            <a class="nav-link" href="registration.php">Registrarse</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.php">User Log In</a>
+            <a class="nav-link" href="login.php">Iniciar sesión</a>
           </li>
 
             <li class="nav-item">
@@ -51,9 +55,11 @@
   <header class="masthead text-center text-white">
     <div class="masthead-content">
       <div class="container">
-        <h1 class="masthead-heading mb-0">Small CRM</h1>
-        <h2 class="masthead-subheading mb-0">CRM Vibrand Media</h2>
-        <a href="registration.php" class="btn btn-primary btn-xl rounded-pill mt-5">User Signup</a>
+        <h1 class="masthead-heading mb-0">CRM</h1>
+        <div style="text-align: center;" >
+            <img src="img/icono-blanco-vm.png" style="width: 750px; height: 250px;"class="masthead-heading mb-0">
+        </div>
+        <a href="registration.php" class="btn btn-primary btn-xl rounded-pill mt-5">Registrarse</a>
       </div>
     </div>
     <div class="bg-circle-1 bg-circle"></div>

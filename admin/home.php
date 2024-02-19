@@ -52,9 +52,9 @@ check_login();
     <div id="portlet-config" class="modal hide">
       <div class="modal-header">
         <button data-dismiss="modal" class="close" type="button"></button>
-        <h3>Widget Settings</h3>
+        <h3>Configuracion de aplicacion</h3>
       </div>
-      <div class="modal-body"> Widget settings form goes here </div>
+      <div class="modal-body"> El formulario de configuración del widget va aquí </div>
     </div>
     <div class="clearfix"></div>
     <div class="content sm-gutter">
@@ -66,13 +66,13 @@ check_login();
 			<div class="tiles green m-b-10">
               <div class="tiles-body">
 			  <div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
-                <div class="tiles-title text-black">Overall Visitors </div>
+                <div class="tiles-title text-black">Visitantes en general </div>
 			         <div class="widget-stats">
                       <div class="wrapper transparent"> 
                       <?php $ov=mysqli_query($con,"select * from usercheck");
 					  $num=mysqli_num_rows($ov);
 					  ?>
-						<span class="item-title">Overall Visitors</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $num;?>" data-animation-duration="700">0</span>
+						<span class="item-title">Visitantes en general</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $num;?>" data-animation-duration="700">0</span>
 					  </div>
                     </div>
                   
@@ -88,7 +88,7 @@ check_login();
 									
 									
 						
-						<span class="item-title">Today</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $num11;?>" data-animation-duration="700">0</span> <?php									
+						<span class="item-title">Dias</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $num11;?>" data-animation-duration="700">0</span> <?php									
 									
 									?>
 					 </div>
@@ -104,12 +104,12 @@ check_login();
 			<div class="tiles blue m-b-10">
               <div class="tiles-body">
 			  <div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
-                <div class="tiles-title text-black">Registered Users  </div>
+                <div class="tiles-title text-black">Usuarios Registrados </div>
 			         <div class="widget-stats">
                       <div class="wrapper transparent">
                       <?php $rt=mysqli_query($con,"select * from user");
 					  $rw=mysqli_num_rows($rt);?> 
-						<span class="item-title">Registered Users</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $rw;?>" data-     animation-duration="700">0</span>
+						<span class="item-title">Usuarios Registrados</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $rw;?>" data-     animation-duration="700">0</span>
 					  </div>
                     </div>
                     <div class="widget-stats ">
@@ -118,7 +118,7 @@ check_login();
 					  $utd=date('Y-m-d');
 					  $rt1=mysqli_query($con,"select * from user where posting_date='$utd'");
 					  $rw1=mysqli_num_rows($rt1);?>
-						<span class="item-title">Today's</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $rw1;?>" data-animation-duration="700">0</span> 
+						<span class="item-title">Dias</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $rw1;?>" data-animation-duration="700">0</span> 
 					 </div>
                     </div>
 			  </div>			
@@ -128,14 +128,14 @@ check_login();
 			<div class="tiles purple m-b-10">
               <div class="tiles-body">
 			  <div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
-                <div class="tiles-title text-black">Quote Requests </div>
+                <div class="tiles-title text-black">Cotización de solicitudes</div>
 			         <div class="widget-stats">
                       <div class="wrapper transparent"> 
                       <?php
                       $qr=mysqli_query($con,"select * from prequest");
 					  $oq=mysqli_num_rows($qr);
 					  ?>
-						<span class="item-title">Overall Quotes</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $oq?>" data-animation-duration="700">0</span>
+						<span class="item-title">Cotizaciones generales</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $oq?>" data-animation-duration="700">0</span>
 					  </div>
                     </div>
                     <div class="widget-stats">
@@ -144,7 +144,7 @@ check_login();
                       $qr1=mysqli_query($con,"select * from prequest where status='0'");
 					  $oq1=mysqli_num_rows($qr1);
 					  ?>
-						<span class="item-title">New Quotes's</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $oq1;?>" data-animation-duration="700">0</span> 
+						<span class="item-title">Nuevas cotizaciones</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $oq1;?>" data-animation-duration="700">0</span> 
 					  </div>
                     </div>
                     <div class="widget-stats ">
@@ -153,7 +153,7 @@ check_login();
                       $qr2=mysqli_query($con,"select * from prequest where status='1'");
 					  $oq2=mysqli_num_rows($qr2);
 					  ?>
-						<span class="item-title">In Progress</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $oq2;?>" data-animation-duration="700">0</span> 
+						<span class="item-title">En curso</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $oq2;?>" data-animation-duration="700">0</span> 
 					 </div>
                     </div>
                   
@@ -170,13 +170,13 @@ check_login();
 			<div class="tiles red m-b-10">
               <div class="tiles-body">
 			  <div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
-                <div class="tiles-title text-black">Overall Tickets </div>
+                <div class="tiles-title text-black">Entradas generales </div>
 			         <div class="widget-stats">
                       <div class="wrapper transparent"> 
                       <?php $vt=mysqli_query($con,"select * from ticket");
 					  $ovt=mysqli_num_rows($vt);
 					  ?>
-						<span class="item-title">All Tickets</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $ovt;?>" data-animation-duration="700">0</span>
+						<span class="item-title">Todas las entradas</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $ovt;?>" data-animation-duration="700">0</span>
 					  </div>
                     </div>
                   
@@ -192,7 +192,7 @@ check_login();
 									
 									
 						
-						<span class="item-title">Pending Tickets</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $otv1;?>" data-animation-duration="700">0</span> <?php									
+						<span class="item-title">Entradas pendientes</span> <span class="item-count animate-number semi-bold" data-value="<?php echo $otv1;?>" data-animation-duration="700">0</span> <?php									
 									
 									?>
 					 </div>
@@ -216,7 +216,7 @@ check_login();
                     <div class="col-lg-12" style="min-height:280px;">
                         <div class="panel panel-red">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> All User Visit </h3>
+                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Visita de todos los usuarios</h3>
 								
 								<script type="text/javascript">
 								var visitorsCount = [];
@@ -242,7 +242,7 @@ check_login();
 										}
 										?>
 										<script type="text/javascript">
-										var myKey = "Day " + '<?php echo $i; ?>';
+										var myKey = "Dia " + '<?php echo $i; ?>';
 										
 										myCat.push(myKey);
 										</script>
@@ -301,23 +301,23 @@ check_login();
 								<script type="text/javascript">
 								var d = new Date();
 								var month = new Array();
-								month[0] = "January";
-								month[1] = "February";
-								month[2] = "March";
-								month[3] = "April";
-								month[4] = "May";
-								month[5] = "June";
-								month[6] = "July";
-								month[7] = "August";
-								month[8] = "September";
-								month[9] = "October";
-								month[10] = "November";
-								month[11] = "December";
+								month[0] = "Enero";
+								month[1] = "Febrero";
+								month[2] = "Marzo";
+								month[3] = "Abril";
+								month[4] = "Mayo";
+								month[5] = "Junio";
+								month[6] = "Julio";
+								month[7] = "Agosto";
+								month[8] = "Septiembre";
+								month[9] = "Octubre";
+								month[10] = "Noviembre";
+								month[11] = "Diciembre";
 								var n = month[d.getMonth()];
 								$(function () {
 								$('#container').highcharts({
 									title: {
-										text: 'Daily Visitors Chart of ' + n,
+										text: 'Grafica de visitantes diarios  ' + n,
 										x: -20 //center
 									},
 									subtitle: {
@@ -330,7 +330,7 @@ check_login();
 									yAxis: {
 										min:0,
 										title: {
-											text: 'Visitors Count'
+											text: 'Recuento de visitantes'
 										},
 										plotLines: [{
 											value: 0,
@@ -339,7 +339,7 @@ check_login();
 										}]
 									},
 									tooltip: {
-										valueSuffix: ' Users'
+										valueSuffix: ' Usuarios'
 									},
 									legend: {
 										layout: 'vertical',
@@ -348,7 +348,7 @@ check_login();
 										borderWidth: 0
 									},
 									series: [{
-										name: 'visitorsCount',
+										name: 'Recuento de visitantes',
 										data: visitorsCount
 									}]
 								});
@@ -360,7 +360,7 @@ check_login();
                             <div class="panel-body">
                                 <div id="morris-line-chart"></div>
                                 <div class="text-right">
-                                    <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a href="#">Ver detalles<i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
